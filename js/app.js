@@ -327,6 +327,7 @@ saveButton.addEventListener('click', function (e) {
 
   // Save to local storage
   localStorage.setItem('userSettings', JSON.stringify(settings));
+  alert('Settings saved!');
 });
 
 // Cancel button event listener
@@ -340,6 +341,8 @@ cancelButton.addEventListener('click', function () {
   // Disable button
   this.disabled = true;
   this.dataset.button = 'disabled';
+
+  alert('Settings reset!');
 });
 
 // Load settings from local storage
