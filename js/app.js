@@ -342,7 +342,10 @@ cancelButton.addEventListener('click', function () {
   this.disabled = true;
   this.dataset.button = 'disabled';
 
-  alert('Settings reset!');
+  // Slight delay so that UI updates first
+  setTimeout(function () {
+    alert('Settings reset!');
+  }, 500);
 });
 
 // Load settings from local storage
